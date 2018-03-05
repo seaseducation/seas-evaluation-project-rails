@@ -1,0 +1,14 @@
+<h1>Editing School</h1>
+
+<div class="row">
+  <div class="col-md-12">
+<%= render 'form', school: @school %>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to 'Back', schools_path, class: 'btn btn-default' %> |
+    <%= link_to 'Show', @school, class: 'btn btn-primary' %>
+  </div>
+</div>

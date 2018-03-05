@@ -1,0 +1,24 @@
+<h1><%= @school.title %></h1>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-md-12">
+    <p>
+      <strong>City:</strong>
+      <%= @school.city %>
+    </p>
+
+    <p>
+      <strong>State:</strong>
+      <%= @school.state %>
+    </p>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to 'Back', schools_path, class: 'btn btn-default' %> |
+    <%= link_to 'Edit', edit_school_path(@school), class: 'btn btn-primary' %>
+  </div>
+</div>

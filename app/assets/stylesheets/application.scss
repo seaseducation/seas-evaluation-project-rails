@@ -1,0 +1,11 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+.navbar-brand img {
+  height: 22px;
+}

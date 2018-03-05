@@ -1,0 +1,29 @@
+<h1><%= @student.first_last_name %></h1>
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col-md-12">
+    <p>
+      <strong>School:</strong>
+      <%= @student.school.title %>
+    </p>
+
+    <p>
+      <strong>Grade:</strong>
+      <%= @student.grade.title %>
+    </p>
+
+    <p>
+      <strong>Program:</strong>
+      <%= @student.program&.title %>
+    </p>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <%= link_to 'Back', students_path, class: 'btn btn-default' %> |
+    <%= link_to 'Edit', edit_student_path(@student), class: 'btn btn-primary' %>
+  </div>
+</div>

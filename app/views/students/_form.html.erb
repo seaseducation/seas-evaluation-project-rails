@@ -1,0 +1,41 @@
+<%= form_with(model: student, local: true, id: 'student_form') do |form| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h4>
+      <ul>
+        <% student.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :student_first_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :student_last_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :school_id, 'School' %>
+    <%= form.select :school_id, select_options_for_school, { include_blank: true }, { class: 'form-control', id: 'student_school_id' } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :grade_id, 'Grade' %>
+    <%= form.select :grade_id, select_options_for_grade, {}, { class: 'form-control', id: 'student_grade_id' } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :program_id, 'Program' %>
+    <%= form.select :program_id, select_options_for_program, { include_blank: true }, {class: 'form-control', id: 'student_program_id' } %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>
